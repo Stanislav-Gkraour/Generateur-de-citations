@@ -33,14 +33,18 @@ let citations = [
 function randomGenerator(max){
    return  Math.trunc(Math.random() * Math.floor(max)) 
 }
-
+// detecter le click d'utilisateur
 nouveau.addEventListener('click', () => {
   do{
+
     nombreAleatoire = randomGenerator(citations.length);
+
   }while(nombreAleatoire == dernier);
+
   citation.textContent = citations[nombreAleatoire][0];
   auteur.textContent = citations[nombreAleatoire][1];
   dernier             = nombreAleatoire;
+  
 })
 
 
